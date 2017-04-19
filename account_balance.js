@@ -1,5 +1,5 @@
 //need both my random number function and my usd converter
-var rand = require('./random_number');
+//var rand = require('./random_number');
 var usd = require('./usd_converter');
 
 //first function requires a random number (but can take any number)
