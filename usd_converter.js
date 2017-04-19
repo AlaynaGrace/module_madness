@@ -1,10 +1,11 @@
-function converter(number){ //will take in a random number but for now takes any number
+//Basically the toLocaleString function but completely written out. It works though!
+function originalConverter(number){ //will take in a random number but for now takes any number
   var total = '$'; //total will have the entire balance at the end in string form
   var beforeDeci = parseInt(number).toString();
   //was originally named because I assumed we would use floats
   //beforeDeci makes sure the number is an int and then turns it into a string
 
-  // var afterDeci = (number - beforeDeci).toFixed(2).toString();
+  var afterDeci = (number - beforeDeci).toFixed(2).toString();
 
   //for loop that will go through each character in the string
   for(var i=0;i<beforeDeci.length;i++){
@@ -20,10 +21,18 @@ function converter(number){ //will take in a random number but for now takes any
 
   }
 
+  total += afterDeci;
 
   return total; //return the finished string
 
 
+}
+
+function converter(number){
+  return number.toLocaleString('USD', {style: 'currency',
+   currency: 'USD',
+   minimumFractionDigits: 2,
+   maximumFractionDigits: 2});
 }
 
 
