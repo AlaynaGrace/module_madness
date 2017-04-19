@@ -28,6 +28,8 @@ function originalConverter(number){ //will take in a random number but for now t
 
 }
 
+//Actually use this function
+//use built in function toLocaleString to convert the number to currency
 function converter(number){
   return number.toLocaleString('USD', {style: 'currency',
    currency: 'USD',
